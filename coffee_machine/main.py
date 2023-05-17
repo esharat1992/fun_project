@@ -59,7 +59,7 @@ def make_coffee(drink_name, drink_cost):
     print(f"Here is your {drink_name}. Enjoy!")
 is_on = True
 while is_on:
-    choice = input("Please choose the type of coffe like espresso, cappuccino, americano: ")
+    choice = input("Please choose the type of coffee like espresso, cappuccino, americano: ")
     if choice =="off":
         is_on = False
     elif choice == "report":
