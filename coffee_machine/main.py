@@ -32,6 +32,9 @@ available_ingredients = {
     "milk": 500
 }
 profit = 0
+def add_ingredient(ingredients):
+    for item in ingredients:
+        available_ingredients[item] += ingredients[item]
 def check_ingredients(order_ingredients):
     for item in order_ingredients:
         if available_ingredients[item] >= order_ingredients[item]:
@@ -62,6 +65,12 @@ while is_on:
     elif choice == "report":
         print(available_ingredients)
         print(f"Total profit: ${profit}")
+    elif choice == "add":
+        water = int(input("Add water into ingredient store(ml): "))
+        sugar = int(input("Add sugar into ingredient store(gm): "))
+        espresso = int(input("Add espresso into ingredient store(ml): "))
+        milk = int(input("Add milk into ingredient store(ml): "))
+        add_ingredient({"water": water, "sugar": sugar, "espresso": espresso, "milk": milk})
     else:
         payment = int(input("Please pay for your item: "))
         drink = coffee_type[choice]
