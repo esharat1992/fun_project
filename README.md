@@ -1,1 +1,1 @@
-# fun_project
+Coffee Machine Project
